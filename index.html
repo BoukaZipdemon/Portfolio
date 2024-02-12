@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boukari Fedi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#"><h1>Bo<span>ukar</span>i Fe<span>di</span></h1></a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#cc">About me</a></li>
+                <li><a href="#pj">projects</a></li>
+                <li><a href="#ss">skills</a></li>
+                <li><a href="#cont">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- this is the main page -->
+    <div class="all">
+    <main>
+        <section class="main">
+            <section class="text">
+                <h1 id="h1">web developer</h1>
+                <p class="pp" id="p">Hi i am <span class="faza">Fedi boukari</span>  .A Front-end developper<br> with a great passion to learn new things and develop myself   </p>
+                <div class="di">
+                    <audio id="myaudio" src="/zapsplat_multimedia_button_click_bright_003_92100.mp3"></audio>
+                    <a href="#cont" ><button  onclick="document.getElementById('myaudio').play()">hire me</button></a>
+                    <button onclick="document.getElementById('myaudio').play()"><a download href="/Boukari fedi (1).pdf">my resumee</a></button>
+                </div>
+            </section>
+            <img src="371494239_651888067113944_7660103221514495693_n.png" alt="">
+            <!-- hedhi aamlt beha faza  -->
+            <span class="t" id="cc"></span>
+        </section>
+        
+    </main>
+    <aside id="aside">
+        <button class="bb" onclick="change_theme()"><img src="bulb.png" alt=""></button>
+        <a href=""><img src="facebook.png" class="logo" alt=""></a>
+        <a href="https://www.linkedin.com/in/fedi-boukari-a679b1208/" target="_blank"><img src="linkedin.png" class="logo" alt=""></a>
+        <a href="https://github.com/BoukaZipdemon" target="_blank"><img src="github.png" class="logo" alt=""></a>
+    </aside>
+    <!-- here is the about me page -->
+    <section id="cc" class="aboutme">
+        <h1>About me</h1>
+        <section class="card">
+            <p class="pp">I am a student at <span>isamm</span>  currently in my first year of studies.I am also learning <span>web development</span> and i have a quite good understanding of the web and the languages like html css js and React soon . i ve build some projects throughout this process and am willing to make more and more .     </p>
+            <img src="undraw_dev_productivity_re_fylf.svg" alt="">
+        </section>
+    </section>
+    <!-- projects page -->
+    <setion class="myprojects" id="pj">
+        <section class="box">
+            <h1 >My projects</h1>
+            <p>Here are my projects =></p>
+        </section>
+        <section class="container">
+            <a href="https://boukazipdemon.github.io/bogasite/"  target="_blank" onclick="document.getElementById('myaudio').play()">
+                <section class="project1">
+                    <h1>Boga website</h1>
+                    <img src="Screenshot 2024-01-31 181547.png" alt="" height="240px">
+                </section>
+            </a>
+            <a href=""  target="_blank" onclick="document.getElementById('myaudio').play()">
+                <section class="project2">
+                    <h1>New project coming soon</h1>
+                    <img src="fotor-ai-20240211144848.jpg" alt="">
+                </section>
+            </a>
+        </section>
+    </setion>
+    <p class="tt" id="ss"></p>
+    <!-- skills page -->
+    <section   class="skills">
+        <section class="together">
+            <h1 >My skills</h1>
+            <p>"i Like to develop  websites that are fun" </p>
+        </section>
+        <section class="contain">
+            <section class="skill">
+                <section class="box1">
+                    <h2>html</h2>
+                    <p class="per">80%</p>
+                </section>
+                <section class="box2">
+                    <h2>css</h2>
+                    <p class="per">70%</p>
+                </section>
+                <section class="box3">
+                    <h2>javascript </h2>
+                    <p class="per"> 50%</p>
+                </section>
+                <section class="box4">
+                    <h2>Php</h2>
+                    <p class="per">50%</p>
+                </section>
+                <section class="box5">
+                    <h2>Sql</h2>
+                    <p class="per">50%</p>
+                </section>
+                <section class="box6">
+                    <h2>wordpress</h2>
+                    <p class="per">10%</p>
+                </section>
+            </section>
+        </section>
+        
+    </section>
+    <!-- contact page -->
+    <section id="cont" class="contact">
+        <section class="txt">
+            <p>Get in touch</p>
+            <h1>contact</h1>
+        </section>
+        <section class="cnt">
+            <section class="part1">
+                <section class="tel">
+                    <img src="telephone.png" alt="" width="40px">
+                    <p>+99 999 999</p>
+                </section>
+                <section class="email">
+                    <img src="email.png" alt="" width="40px">
+                    <p>boukarifedi20@gmail.com</p>
+                </section>
+                <section class="place">
+                    <img src="map.png" alt="" width="40px">
+                    <p>Tunisia,Tunis</p>
+                </section>
+            </section>
+            <section class="bar">
+
+            </section>
+            <section class="part2">
+                <form action="index.html">
+                    <div>
+                        <label for="t">Your Name</label><br>
+                        <input type="text" id="t" placeholder="full name" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="x">Your Email</label><br>
+                        <input type="text" id="x" placeholder="tt@gmail.com" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="v">Your Message</label><br>
+                        <textarea name="" id="v" cols="60" rows="60" required></textarea>
+                    </div>
+                    <br>
+                    <input type="submit" value="send" onclick="document.getElementById('myaudio').play()"> 
+                </form>
+        </section>
+    </section>
+    </section>
+    </div>
+</body>
+</html>

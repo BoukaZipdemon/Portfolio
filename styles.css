@@ -1,0 +1,720 @@
+/* imported font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: #fffffe;
+}
+.all{
+    display: flex;
+    flex-direction: column;
+}
+span{
+    color: #ff8906;
+}
+.faza{
+    color: #8177d1;
+    font-weight: bold;
+}
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f0e17;
+    color: #fffffe;
+    position: fixed;
+    z-index: 100;
+}
+ul{
+    display: flex;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-right: 50px;
+}
+li a{
+    margin-right: 20px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: #ff8906;
+    padding-left: 20px;
+}
+
+li:hover{
+    background-color: #fffffe;
+    border-radius: 3px;
+    transform: scale(1.3);
+    
+}
+header h1{
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+    font-family: 'Protest Strike', sans-serif;
+    margin-left: 30px;
+}
+/* css for the main content */
+main{
+    background-color: #0f0e17;
+}
+.main{
+    width: 90%;
+    height: 100vh;
+    display: flex;
+}
+.text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin:  auto 6rem;
+}
+.text h1{
+    font-size: 2rem;
+    font-family: 'Protest Strike', sans-serif;
+    letter-spacing: 5px;
+    animation:tracking-in-expand 3s cubic-bezier(.215,.61,.355,1.000) both;
+}
+.text p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 50px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    color: #a7a9be;
+    text-align: center;
+    animation:tracking-in-expand 3s cubic-bezier(.215,.61,.355,1.000) both;
+}
+button:not(.bb){
+    background-color: #ff8906;
+    color: #fffffe;
+    width: 200px;
+    height: 40px;
+    border: 3px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+}
+/* some tricks */
+.bb:hover{
+    border: 3px solid rgb(0, 0, 0);
+}
+button  img{
+    width: 30px;
+    height: 20px;
+}
+/* some styling for the buttons */
+button:hover{
+    border-color: #fffffe;
+    cursor: pointer;
+    font-size: 15px;
+}
+.main img{
+    margin: auto 50px;
+    float: right;
+    width: 400px;
+    height: 400px;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 55%, 100% 100%, 80% 90%, 10% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    animation: anim1;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/* here some animations for the img */
+@keyframes anim1{
+    0%{
+        clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    }
+    50%{
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    }
+}
+/* p => creatng a bar + styling it */
+.pp::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    border-right: 5px solid rgb(255, 255, 255);
+    animation: baranim;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+@keyframes baranim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    }
+
+}
+/* aside part */
+aside{
+    border-radius: 15px;
+    background-color: #ff8b06;
+    position: fixed;
+    z-index: 300;
+    width: 50px;
+    height: 300px;
+    right: 20px;
+    top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+aside:hover{
+    background-color: #ff8b06cb;
+}
+.logo{
+    height: 30px ;
+    width: 90%;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 2px;
+}
+.logo:hover{
+    border: 2px solid white;
+
+}
+/* this is the about me part */
+.aboutme{
+    background-color: #fffffe;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 140px;
+}
+.aboutme h1{
+    color: #0f0e17;
+    font-family: 'Protest Strike', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 50px;
+}
+/* just trick sghira */
+.t{
+    width: 100px;
+    position: relative;
+    top: 600px;
+}
+.card{
+    height: 90%;
+    width: 80%;
+    margin: auto;
+    background-color: #0f0e17;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.card .pp{
+    font-size: 15px;
+    letter-spacing: 3px;
+    line-height: 40px;
+    color: #a7a9be;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.card img{
+    float: right;
+    width: 300px;
+    height: 400px;
+    margin: auto 20px;
+}
+/* projects section */
+.myprojects{
+    height: 100vh;
+    width: 100%;
+    background-color: #0f0e17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Protest Strike', sans-serif;
+}
+.box h1{
+    font-size: 2rem;
+    letter-spacing: 8px;
+}
+.box p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 50px;
+    
+}
+.project1,.project2{
+    background-color: #fffffe;
+    height: 400px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    color: #0f0e17;
+    margin: 10px;
+    border-radius: 10px;
+    justify-content: space-around;
+    
+
+}
+.project1:hover,.project2:hover{
+    border: 5px solid #ff8906;
+}
+.container h1{
+    color: #8177d1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+/* skills */
+.skills{
+    height: 80vh;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skills h1{
+    color: #0f0e17;
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px rgb(255, 191, 0);
+    text-align: center;
+}
+.skills p{
+    color: #a7a9be;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+}
+.box1,.box2,.box3,.box4,.box5,.box6{
+    width: 1000px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation-name: anima;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    letter-spacing: 2px;
+
+}
+.box1{
+    background-color: #8177d1;
+    width: 800px;
+}
+.box2{
+    background-color: #fc8b0b;
+    width: 700px;
+}
+.box3{
+    background-color: #0079fb;
+    width: 500px;
+}
+.box4{
+    background-color: #fb00c0;
+    width: 500px;
+}
+.box5{
+    background-color: #a7a9be;
+    width: 500px;
+}
+.box6{
+    background-color: brown;
+    width: 180px;
+}
+
+@keyframes anima{
+    0%{
+        background-color: #8177d1;
+        width: 20px;
+    }
+    100%{
+        
+    }
+}
+p.per{
+    color: white;
+}
+/* finaaly contact */
+.contact{
+    height: 80vh;
+    background-color: #0f0e17;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.txt{
+    text-align: center;
+}
+.txt h1{
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 3rem;
+}
+.txt p{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #a7a9be;
+}
+.cnt{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+.bar{
+    width: 5px;
+    height: 300px;
+    background-color: white;
+}
+.part1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.part1 p{
+    text-transform: capitalize;
+    display: inline;
+    line-height: 100px;
+    text-align: center;
+    margin-left: 10px;
+}
+form input{
+    width: 15rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+    border: 2px solid #ff8906;
+    color: #0f0e17;
+}
+textarea{
+    height: 8rem;
+    color: #0f0e17;
+    font-size: 1rem;
+    border: 2px solid #ff8906;
+}
+input[type=submit]{
+    background-color: #ff8906;
+    color: #fffffe;
+    width: 200px;
+    height: 40px;
+    border: 3px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.tt{
+    z-index: 10000;
+    height: 30px;
+}
+
+/*making it responsive*/
+@media only screen and (max-width:1400px) and (min-width:1200px) {
+    button:not(.bb){
+        width:150px;
+    }
+    .text h1{
+       
+        font-size: 1.3rem;
+    }
+    .text p{
+        font-size: 0.8rem;
+        line-height: 40px;
+    }
+    .card .pp{
+        font-size: 0.9rem;
+        line-height: 30px;
+    }
+
+}
+@media only screen and (max-width:1200px) and (min-width:1000px) {
+    button:not(.bb){
+        width:150px;
+    }
+    .text h1{
+       
+        font-size: 1.3rem;
+    }
+    .text p{
+        font-size: 0.8rem;
+        line-height: 40px;
+    }
+    .di{
+        display: flex;
+        flex-direction: column;
+    }
+    .main img{
+        height: 320px;
+        width: 320px;
+    }
+    .card .pp{
+        font-size: 0.8rem;
+        line-height: 30px;
+    }
+    .card img{
+        width: 200px;
+    }
+    .myprojects{
+        flex-direction: column;
+    }
+    .box1{
+        width: 400px;
+    }
+    .box2{
+        width: 350px;
+    }
+    .box3{
+        width: 250px;
+    }
+    .box4{
+        width: 250px;
+    }
+    .box5{
+        width: 250px;
+    }
+    .box6{
+        width: 90px;
+    }
+    
+
+}
+@media only screen and (max-width:1000px) and (min-width:900px){
+    button:not(.bb){
+        width:130px;
+    }
+    .text h1{
+       
+        font-size: 1.2rem;
+    }
+    .text p{
+        font-size: 0.8rem;
+        line-height: 35px;
+    }
+    .di{
+        display: flex;
+        flex-direction: column;
+    }
+    .main img{
+        height: 250px;
+        width: 250px;
+    }
+    .card .pp{
+        font-size: 0.7rem;
+        line-height: 25px;
+    }
+    .card img{
+        width: 150px;
+    }
+    .myprojects{
+        flex-direction: column;
+    }
+    .box1{
+        width: 400px;
+    }
+    .box2{
+        width: 350px;
+    }
+    .box3{
+        width: 250px;
+    }
+    .box4{
+        width: 250px;
+    }
+    .box5{
+        width: 250px;
+    }
+    .box6{
+        width: 90px;
+    }
+    aside{
+        width:35px;
+        height: 250px;
+    }
+}
+@media only screen and (max-width:900px) {
+    button:not(.bb){
+        width:130px;
+    }
+    .text h1{
+       
+        font-size: 1.2rem;
+    }
+    .text p{
+        font-size: 0.8rem;
+        line-height: 35px;
+    }
+    .aboutme p{
+        text-align: center;
+    }
+    .di{
+        display: flex;
+        flex-direction: column;
+    }
+    .main img{
+        height: 250px;
+        width: 250px;
+        margin-top: 100px;
+    }
+    .main .text{
+        margin-bottom: 70px;
+    }
+    .card .pp{
+        font-size: 0.7rem;
+        line-height: 20px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+    .card img{
+        width: 100px;
+    }
+    .myprojects{
+        flex-direction: column;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    .project1,.project2{
+        height: 330px;
+        width: 170px;
+        font-size: 0.8rem;
+    }
+    .project1 img{
+        height: 170px;
+    }
+    .box1{
+        width: 270px;
+    }
+    .box2{
+        width: 220px;
+    }
+    .box3{
+        width: 120px;
+    }
+    .box4{
+        width: 120px;
+    }
+    .box5{
+        width: 120px;
+    }
+    .box6{
+        width: 25px;
+    }
+    aside{
+        width:35px;
+        height: 230px;
+    }
+    .main{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    header h1{
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    header li a{
+        font-size: 0.8rem;
+        padding-left: 5px;
+    }
+    ul{
+        margin-right: 0px;
+    }
+    li a{
+        margin-right: 5px;
+        letter-spacing: 1px;
+        color: #ff8906;
+
+    }
+    .card{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .part1 p{
+        text-transform: capitalize;
+        display: inline;
+        line-height: 50px;
+        text-align: center;
+    }
+    form input{
+        width: 12rem;
+        height: 2rem;
+        font-size: 0.8rem;
+        border: 2px solid #ff8906;
+        color: #0f0e17;
+    }
+    textarea{
+        height: 4rem;
+        color: #0f0e17;
+        width: 80%;
+        font-size: 1rem;
+        border: 2px solid #ff8906;
+    }
+    input[type=submit]{
+        background-color: #ff8906;
+        color: #fffffe;
+        width: 150px;
+        height: 40px;
+        border: 3px solid black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .bar{
+        width: 4px;
+        height: 300px;
+        margin: 10px;
+        background-color: white;
+    }
+    .part1 img{
+        width: 25px;
+        display: block;
+        margin: auto;
+    }
+}
+/* here used an animation generator from a website called animsta*/
+@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+.skills h1, .skills p{
+    animation:tracking-in-expand 3s cubic-bezier(.215,.61,.355,1.000) both;
+    /* added by me */
+    animation-timeline: view();
+}
+.contact h1,.contact p{
+    animation:tracking-in-expand 3s cubic-bezier(.215,.61,.355,1.000) both;
+    /* added by me */
+    animation-timeline: view();
+    animation-range-start: -400px;
+}
